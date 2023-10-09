@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:background="@color/cool_pink"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/playListHeader"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/cool_pink"
+        android:gravity="center"
+        android:text="@string/Playlists"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/playListCover"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/splash_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playListHeader" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="119dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerPlaylistDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/playListCover"
+        app:layout_constraintTop_toBottomOf="@+id/playListHeader"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/cool_pink"
+        app:layout_constraintVertical_bias="0.206">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playlist Name"
+            />
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:layout_margin="3dp"
+
+            android:id="@+id/playlistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:layout_margin="3dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created By"
+            />
+
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:layout_margin="3dp"
+
+            android:id="@+id/personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:layout_margin="3dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On Date"
+            />
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:id="@+id/onDate"
+            android:layout_margin="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:textColor="@color/white"
+
+
+            android:layout_margin="3dp"
+            android:text="Songs count and Runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:layout_margin="3dp"
+            android:id="@+id/detailsPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPlaylistDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/deleteBtnPD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playListCover" />
+
+    <ImageView
+        android:id="@+id/addBtnPD"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:src="@drawable/ic_add_new"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/addBtnPlaylistDetails"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toEndOf="@+id/addBtnPD" />
+
+
+    <ImageView
+        android:id="@+id/deleteBtnPD"
+        android:backgroundTint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:tint="@color/cool_pink" />
+
+    <TextView
+
+        android:gravity="center"
+        android:id="@+id/deleteAllPD"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:text="@string/delete_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deleteBtnPD" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="196dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

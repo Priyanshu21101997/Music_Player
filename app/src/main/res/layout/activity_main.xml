@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/shuffle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/Shuffle"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_shuffle"
+                android:text="@string/Shuffle"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/favourites_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/Favorites"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_favorite"
+                android:text="@string/Favorites"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                />
+
+
+            <Button
+                android:id="@+id/playlists_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/Playlists"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_playlist"
+                android:text="@string/Playlists"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/total_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_Songs"
+            android:layout_marginLeft="20dp"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="610dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_drawer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/nav_menu"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
