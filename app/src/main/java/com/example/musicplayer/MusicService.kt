@@ -41,7 +41,7 @@ class MusicService: Service() {
 
     fun showNotification(resId: Int) {
         val mediaSession = MediaSessionCompat(this, "MY Music")
-        lateinit var bitmap:Bitmap
+//        lateinit var bitmap:Bitmap
 
         val prevIntent = Intent(this,NotificationBroadcast::class.java).setAction(ApplicationClass.PREV)
         val prevPendingIntent = PendingIntent.getBroadcast(this,0,prevIntent, PendingIntent.FLAG_IMMUTABLE)
@@ -55,13 +55,13 @@ class MusicService: Service() {
         val exitIntent = Intent(this,NotificationBroadcast::class.java).setAction(ApplicationClass.EXIT)
         val exitPendingIntent = PendingIntent.getBroadcast(this,0,exitIntent, PendingIntent.FLAG_IMMUTABLE)
 
-        val imageArt = getImageArt(PlayerActivity.musicListPA[PlayerActivity.songPosition].path)
-        if(imageArt != null){
-            bitmap = BitmapFactory.decodeByteArray(imageArt,0, imageArt.size)
-        }
-        else{
-            bitmap = BitmapFactory.decodeResource(resources, R.drawable.music_player_icon_splash_screen)
-        }
+//        val imageArt = getImageArt(PlayerActivity.musicListPA[PlayerActivity.songPosition].path)
+//        if(imageArt != null){
+//            bitmap = BitmapFactory.decodeByteArray(imageArt,0, imageArt.size)
+//        }
+//        else{
+//            bitmap = BitmapFactory.decodeResource(resources, R.drawable.music_player_icon_splash_screen)
+//        }
 
         val notification =  NotificationCompat.Builder(this, ApplicationClass.CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_playlist)
@@ -70,7 +70,7 @@ class MusicService: Service() {
             .setStyle(androidx.media.app.NotificationCompat.MediaStyle().setShowActionsInCompactView(0,1,2))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-            .setLargeIcon(bitmap)
+//            .setLargeIcon(bitmap)
             .setOnlyAlertOnce(true)
             .addAction(R.drawable.ic_previous, "Prev", prevPendingIntent)
             .addAction(resId, "Play", playPendingIntent)

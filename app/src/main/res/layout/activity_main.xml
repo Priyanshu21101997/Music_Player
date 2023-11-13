@@ -8,89 +8,110 @@
     tools:openDrawer="start"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/shuffle_btn"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/shuffle_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/Shuffle"
+                    android:drawableTop="@drawable/ic_shuffle"
+                    android:text="@string/Shuffle"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/favourites_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/Favorites"
+                    android:drawableTop="@drawable/ic_favorite"
+                    android:text="@string/Favorites"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+
+                <Button
+                    android:id="@+id/playlists_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/Playlists"
+                    android:drawableTop="@drawable/ic_playlist"
+                    android:text="@string/Playlists"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/total_songs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/Shuffle"
-                android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_shuffle"
-                android:text="@string/Shuffle"
-                android:textSize="10sp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/total_Songs"
                 android:textColor="@color/black"
-                android:textAllCaps="false"
-                />
-
-            <Button
-                android:id="@+id/favourites_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/Favorites"
-                android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_favorite"
-                android:text="@string/Favorites"
-                android:textSize="10sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false"
-                />
+                android:textSize="13dp" />
 
 
-            <Button
-                android:id="@+id/playlists_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/Playlists"
-                android:backgroundTint="@color/white"
-                android:drawableTop="@drawable/ic_playlist"
-                android:text="@string/Playlists"
-                android:textSize="10sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false"
-                />
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="575dp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    app:layout_constraintBottom_toBottomOf="@id/recycler_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="NotSibling" />
+
+
+
+
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/total_songs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/total_Songs"
-            android:layout_marginLeft="20dp"
-            android:textSize="13dp"
-            android:textColor="@color/black"
-            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="610dp"
-            android:layout_marginTop="5dp"
-            android:scrollbars="vertical" />
-
-        <FrameLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="58dp">
-
-        </FrameLayout>
 
 
-    </LinearLayout>
 
 
 
@@ -101,6 +122,9 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_menu"/>
+
+
+
 
 
 

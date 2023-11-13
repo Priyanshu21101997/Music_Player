@@ -1,6 +1,7 @@
 package com.example.musicplayer
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +44,7 @@ class PlaylistDetailsAdapter(private val context: Context, private var resultant
             .load(resultantMusicList[position].artUri)
             .apply(RequestOptions().placeholder(R.drawable.splash_screen).centerCrop())
             .into(holder.image)
+
     }
 
     override fun getItemCount():Int  = resultantMusicList.size

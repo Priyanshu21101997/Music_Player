@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/textViewPA"
-        android:layout_width="130dp"
+        android:layout_width="170dp"
         android:layout_height="40dp"
         android:text="@string/playlist_name"
         android:contentDescription="@string/playlist_name"
@@ -33,7 +33,7 @@
         android:layout_height="40dp"
         android:src="@drawable/ic_baseline_delete_24"
         android:layout_marginTop="130dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginLeft="110dp"
         android:background="@color/white"
         app:tint="@color/cool_pink" />
 
