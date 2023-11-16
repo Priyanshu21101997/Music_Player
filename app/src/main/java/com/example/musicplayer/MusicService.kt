@@ -43,6 +43,14 @@ class MusicService: Service() {
         val mediaSession = MediaSessionCompat(this, "MY Music")
 //        lateinit var bitmap:Bitmap
 
+        val intent = Intent(this,MainActivity::class.java)
+        intent.putExtra(index,PlayerActivity.songPosition)
+        intent.putExtra(className,"MusicAdapter")
+
+        val contentIntent = PendingIntent.getActivity(this, 0 , intent, PendingIntent.FLAG_IMMUTABLE)
+
+
+
         val prevIntent = Intent(this,NotificationBroadcast::class.java).setAction(ApplicationClass.PREV)
         val prevPendingIntent = PendingIntent.getBroadcast(this,0,prevIntent, PendingIntent.FLAG_IMMUTABLE)
 
@@ -64,6 +72,7 @@ class MusicService: Service() {
 //        }
 
         val notification =  NotificationCompat.Builder(this, ApplicationClass.CHANNEL_ID)
+            .setContentIntent(contentIntent)
             .setSmallIcon(R.drawable.ic_playlist)
             .setContentTitle(PlayerActivity.musicListPA[PlayerActivity.songPosition].title)
             .setContentText(PlayerActivity.musicListPA[PlayerActivity.songPosition].artist)
