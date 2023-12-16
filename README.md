@@ -1,6 +1,6 @@
 <h1>Simple Yet A Feature Rich Music Player Application.</h1>
 
-Some ScreenShots
+<h3>Some ScreenShots</h3>
 
 <p>
 <img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen1.png" width="128"/>
