@@ -1,4 +1,4 @@
-Simple Yet A Feature Rich Music Player Application.
+<h1>Simple Yet A Feature Rich Music Player Application.</h1>
 
 Some ScreenShots
 
