@@ -13,7 +13,7 @@
 <img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_5.png" width="128"/>
 </p>
 
-Features👇 :
+<h3>Features👇 :</h3>
 
 <p>Play/Pause Audio</p>
 <p>Favourite Songs</p>
