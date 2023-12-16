@@ -15,13 +15,13 @@ Some ScreenShots
 
 Features👇 :
 
-Play/Pause Audio
-Favourite Songs
-Create & Add Playlists
-Sleep Timer
-Audio Booster
-Built-in System Equalizer
-Background Playing with Custom Notification
-Android 10 Notification with Seekbar
-Decent UI with New Material Widgets
-And Much More....
+<p>Play/Pause Audio</p>
+<p>Favourite Songs</p>
+<p>Create & Add Playlists</p>
+<p>Sleep Timer</p>
+<p>Audio Booster</p>
+<p>Built-in System Equalizer</p>
+<p>Background Playing with Custom Notification</p>
+<p>Android 10 Notification with Seekbar</p>
+<p>Decent UI with New Material Widgets</p>
+<p>And Much More....</p>
