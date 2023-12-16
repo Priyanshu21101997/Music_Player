@@ -8,9 +8,9 @@
 <img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_2.png" width="328"/>
 </p>
 <p>
-<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_3.png" width="128"/>
-<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_4.png" width="128"/>
-<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_5.png" width="128"/>
+<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_3.png" width="328"/>
+<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_4.png" width="328"/>
+<img src="https://github.com/Priyanshu21101997/Music_Player/blob/master/Screenshots/screen_5.png" width="328"/>
 </p>
 
 <h3>Features👇 :</h3>
